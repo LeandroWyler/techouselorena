@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TecHouse ó AssistÍncia e AcessÛrios</title>
-  <meta name="description" content="Cat·logo TecHouse: assistÍncia tÈcnica, capas, pelÌculas, cabos e ·udio. Compre pelo WhatsApp em 1 clique." />
+  <title>TecHouse ‚Äî Assist√™ncia e Acess√≥rios</title>
+  <meta name="description" content="Cat√°logo TecHouse: assist√™ncia t√©cnica, capas, pel√≠culas, cabos e √°udio. Compre pelo WhatsApp em 1 clique." />
   <meta name="theme-color" content="#0F1115"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script src="https://kit.fontawesome.com/a2d9d5f2c8.js" crossorigin="anonymous"></script>
   <link rel="manifest" href="data:application/manifest+json,{
-  \"name\":\"TecHouse ó AssistÍncia e AcessÛrios\",
+  \"name\":\"TecHouse ‚Äî Assist√™ncia e Acess√≥rios\",
   \"short_name\":\"TecHouse\",
   \"start_url\":\"./index.html\",
   \"display\":\"standalone\",
@@ -84,7 +84,7 @@
     .pill{display:inline-flex; align-items:center; gap:6px; padding:6px 10px; border-radius:999px; border:1px solid rgba(255,255,255,.12); background:#1b1f27; font-size:.8rem}
   </style>
   <script>
-    // service worker mÌnimo embutido (inline) para PWA cache-first
+    // service worker m√≠nimo embutido (inline) para PWA cache-first
     if('serviceWorker' in navigator){
       const sw = `self.addEventListener('install',e=>{e.waitUntil(caches.open('techouse-v1').then(c=>c.addAll(['./','./index.html','MOCKUP 3.png'])))});self.addEventListener('fetch',e=>{e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request)))})`;
       const blob = new Blob([sw],{type:'text/javascript'});
@@ -103,20 +103,20 @@
         <img src="MOCKUP 3.png" alt="Logo TecHouse" />
         <div>
           <h1>TecHouse</h1>
-          <small>AssistÍncia e AcessÛrios</small>
+          <small>Assist√™ncia e Acess√≥rios</small>
         </div>
       </a>
 
       <label class="search" aria-label="Buscar produtos">
         <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="search" placeholder="Buscar por nome, modelo ou categoriaÖ" x-model="q" @input="applyFilters" />
+        <input type="search" placeholder="Buscar por nome, modelo ou categoria‚Ä¶" x-model="q" @input="applyFilters" />
       </label>
 
       <div class="controls">
         <select class="chip" x-model="ordem" @change="applyFilters">
-          <option value="relevancia">Ordenar: Relev‚ncia</option>
-          <option value="menor">Menor preÁo</option>
-          <option value="maior">Maior preÁo</option>
+          <option value="relevancia">Ordenar: Relev√¢ncia</option>
+          <option value="menor">Menor pre√ßo</option>
+          <option value="maior">Maior pre√ßo</option>
           <option value="novos">Mais novos</option>
         </select>
         <a class="cta-wa" :href="waLoja" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
@@ -129,15 +129,15 @@
   <section class="container hero">
     <div class="hero-card" data-aos="fade-up">
       <div>
-        <h2>AssistÍncia tÈcnica e acessÛrios premium, com <span style="color:var(--gold)">compra pelo WhatsApp</span> em 1 clique.</h2>
-        <p>Cat·logo atualizado, garantia, retirada r·pida e opÁ„o de <strong>pagamento na entrega</strong> em Lorena/SP.</p>
+        <h2>Assist√™ncia t√©cnica e acess√≥rios premium, com <span style="color:var(--gold)">compra pelo WhatsApp</span> em 1 clique.</h2>
+        <p>Cat√°logo atualizado, garantia, retirada r√°pida e op√ß√£o de <strong>pagamento na entrega</strong> em Lorena/SP.</p>
         <div class="badges">
           <span class="badge"><i class="fa-solid fa-shield-halved"></i> Garantia</span>
-          <span class="badge"><i class="fa-solid fa-bolt"></i> Retirada R·pida</span>
+          <span class="badge"><i class="fa-solid fa-bolt"></i> Retirada R√°pida</span>
           <span class="badge"><i class="fa-solid fa-hand-holding-dollar"></i> Pague na entrega</span>
         </div>
         <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px">
-          <span class="pill"><i class="fa-solid fa-location-dot"></i> Lorena e regi„o</span>
+          <span class="pill"><i class="fa-solid fa-location-dot"></i> Lorena e regi√£o</span>
           <span class="pill"><i class="fa-solid fa-certificate" style="color:var(--gold)"></i> Qualidade TecHouse</span>
         </div>
         <div style="display:flex; gap:12px; margin-top:14px">
@@ -153,11 +153,11 @@
     <div class="filters" data-aos="fade-up" data-aos-delay="100">
       <button class="chip" :data-active="cat==='all'" @click="setCat('all')">Tudo</button>
       <button class="chip" :data-active="cat==='capas'" @click="setCat('capas')">Capas</button>
-      <button class="chip" :data-active="cat==='peliculas'" @click="setCat('peliculas')">PelÌculas</button>
+      <button class="chip" :data-active="cat==='peliculas'" @click="setCat('peliculas')">Pel√≠culas</button>
       <button class="chip" :data-active="cat==='cabos'" @click="setCat('cabos')">Cabos & Carregadores</button>
-      <button class=\"chip\" :data-active=\"cat==='audio'\" @click=\"setCat('audio')\">¡udio<\/button>
+      <button class=\"chip\" :data-active=\"cat==='audio'\" @click=\"setCat('audio')\">√Åudio<\/button>
       <button class=\"chip\" :data-active=\"cat==='celulares'\" @click=\"setCat('celulares')\">Celulares<\/button>
-      <button class=\"chip\" :data-active=\"cat==='servicos'\" @click=\"setCat('servicos')\">ServiÁos<\/button>
+      <button class=\"chip\" :data-active=\"cat==='servicos'\" @click=\"setCat('servicos')\">Servi√ßos<\/button>
       <span class="chip" style="cursor:default">Resultados: <b x-text="filtrados.length"></b></span>
     </div>
 
@@ -173,7 +173,7 @@
             <p class="desc" x-text="p.desc" itemprop="description"></p>
             <div class="price">
               <strong x-text="formatBRL(p.preco)" itemprop="price"></strong>
-              <span class="muted" x-show="p.parc">em atÈ {{p.parc}}x</span>
+              <span class="muted" x-show="p.parc">em at√© {{p.parc}}x</span>
             </div>
             <div class="actions">
               <button class="btn-wa" @click="comprarWhatsApp(p)"><i class="fa-brands fa-whatsapp"></i> Comprar</button>
@@ -184,11 +184,11 @@
       </template>
     </div>
 
-    <!-- PaginaÁ„o -->
+    <!-- Pagina√ß√£o -->
     <div class="container" style="display:flex; gap:10px; justify-content:center; margin-top:18px">
-      <button class="chip" :disabled="pagina===1" @click="pagina--; paginar()">? Anterior</button>
-      <span class="chip" style="cursor:default">P·gina <b x-text="pagina"></b> de <b x-text="totalPaginas"></b></span>
-      <button class="chip" :disabled="pagina===totalPaginas" @click="pagina++; paginar()">PrÛxima ?</button>
+      <button class="chip" :disabled="pagina===1" @click="pagina--; paginar()">‚Üê Anterior</button>
+      <span class="chip" style="cursor:default">P√°gina <b x-text="pagina"></b> de <b x-text="totalPaginas"></b></span>
+      <button class="chip" :disabled="pagina===totalPaginas" @click="pagina++; paginar()">Pr√≥xima ‚Üí</button>
     </div>
   </section>
 
@@ -219,7 +219,7 @@
     <div class="container footer-grid">
       <div>
         <h4 style="margin:0 0 6px 0">TecHouse</h4>
-        <p class="muted">AssistÍncia tÈcnica, acessÛrios e soluÁıes para seu smartphone. Atendimento r·pido via WhatsApp.</p>
+        <p class="muted">Assist√™ncia t√©cnica, acess√≥rios e solu√ß√µes para seu smartphone. Atendimento r√°pido via WhatsApp.</p>
         <div class="social">
           <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
           <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
@@ -229,23 +229,23 @@
       <div>
         <h4 style="margin:0 0 6px 0">Atendimento</h4>
         <ul style="list-style:none; padding:0; margin:0; color:var(--silver)">
-          <li>SegñS·b: 9h ‡s 19h</li>
+          <li>Seg‚ÄìS√°b: 9h √†s 19h</li>
           <li>WhatsApp: <a :href="waLoja" target="_blank" rel="noopener" style="color:#9FE7BF">(12) 99201-8898</a></li>
           <li>Retirada na loja</li>
         </ul>
       </div>
       <div>
-        <h4 style="margin:0 0 6px 0">Links r·pidos</h4>
+        <h4 style="margin:0 0 6px 0">Links r√°pidos</h4>
         <ul style="list-style:none; padding:0; margin:0; color:var(--silver)">
           <li><a href="#grid" style="color:var(--silver)">Produtos</a></li>
           <li><a :href="waLoja" target="_blank" rel="noopener" style="color:var(--silver)">Falar no Whats</a></li>
-          <li><a href="#" style="color:var(--silver)">PolÌtica de Troca</a></li>
+          <li><a href="#" style="color:var(--silver)">Pol√≠tica de Troca</a></li>
         </ul>
       </div>
     </div>
     <div class="container" style="border-top:1px solid rgba(255,255,255,.08); margin-top:18px; padding-top:12px; color:var(--silver); display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap">
-      <small>© <span x-text="new Date().getFullYear()"></span> TecHouse. Todos os direitos reservados.</small>
-      <small>Feito com ? no Brasil.</small>
+      <small>¬© <span x-text="new Date().getFullYear()"></span> TecHouse. Todos os direitos reservados.</small>
+      <small>Feito com ‚ù§ no Brasil.</small>
     </div>
   </footer>
 
@@ -253,11 +253,11 @@
     <div style="display:flex; gap:10px; align-items:flex-start">
       <div style="background:rgba(207,162,74,.18); border:1px solid rgba(207,162,74,.35); width:48px; height:48px; border-radius:12px; display:grid; place-items:center"><i class="fa-solid fa-bolt" style="color:var(--gold)"></i></div>
       <div style="flex:1">
-        <strong>Oferta rel‚mpago</strong>
-        <p class="muted" style="margin:4px 0 8px 0">Leve 2 pelÌculas e ganhe <strong>10% OFF</strong> em capinhas. V·lido hoje!</p>
+        <strong>Oferta rel√¢mpago</strong>
+        <p class="muted" style="margin:4px 0 8px 0">Leve 2 pel√≠culas e ganhe <strong>10% OFF</strong> em capinhas. V√°lido hoje!</p>
         <div style="display:flex; gap:8px">
           <button class="btn btn-primary" @click="abrirOferta()">Ver itens</button>
-          <button class="btn btn-outline" @click="mostrarPromo=false">Agora n„o</button>
+          <button class="btn btn-outline" @click="mostrarPromo=false">Agora n√£o</button>
         </div>
       </div>
       <button class="close-x" style="position:static" @click="mostrarPromo=false"><i class="fa-solid fa-xmark"></i></button>
@@ -277,29 +277,29 @@
         q:'', cat:'all', mostrarPromo:true, ordem:'relevancia',
         pagina:1, porPagina:8, totalPaginas:1,
         waNumero: '5512992018898',
-        get waLoja(){ return `https://wa.me/${this.waNumero}?text=${encodeURIComponent('Ol·! Vim pelo site da TecHouse e gostaria de atendimento.')}'; },
+        get waLoja(){ return `https://wa.me/${this.waNumero}?text=${encodeURIComponent('Ol√°! Vim pelo site da TecHouse e gostaria de atendimento.')}'; },
 
         produtos:[
-          {id:101, cat:'cabos', titulo:'Carregador Turbo USB-C 25W', desc:'CompatÌvel com Samsung, Motorola e Xiaomi. SaÌda PD 25W.', preco:119.9, parc:5, tag:'Original', img:'https://images.unsplash.com/photo-1586816879360-004f5b0c51e3?q=80&w=800&auto=format&fit=crop', data:'2025-08-10'},
-          {id:102, cat:'cabos', titulo:'Cabo MagnÈtico 3 em 1', desc:'Lightning, Micro-USB e USB-C com engate r·pido.', preco:59.9, parc:3, tag:'3 em 1', img:'https://images.unsplash.com/photo-1581351123004-757df051db8d?q=80&w=800&auto=format&fit=crop', data:'2025-08-09'},
-          {id:103, cat:'audio', titulo:'Fone Bluetooth TWS Pro', desc:'Cancelamento de ruÌdo, IPX4, 24h de bateria.', preco:199.9, parc:6, tag:'Top', img:'https://images.unsplash.com/photo-1518449073235-2206b9b9c2c5?q=80&w=800&auto=format&fit=crop', data:'2025-08-08'},
-          {id:104, cat:'peliculas', titulo:'PelÌcula de Vidro 9H', desc:'Anti-risco e anti-impacto para iPhone/Samsung/Motorola.', preco:39.9, parc:2, tag:'ProteÁ„o', img:'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800&auto=format&fit=crop', data:'2025-08-07'},
-          {id:105, cat:'capas', titulo:'Capinha Anti-Impacto Transparente', desc:'ProteÁ„o reforÁada com cantos airbag.', preco:69.9, parc:3, tag:'Mais vendido', img:'https://images.unsplash.com/photo-1600166898404-c6d015f5aa98?q=80&w=800&auto=format&fit=crop', data:'2025-08-06'},
-          {id:106, cat:'cabos', titulo:'Power Bank 20.000mAh', desc:'Duas saÌdas USB, carregamento r·pido.', preco:179.9, parc:6, tag:'Alta capacidade', img:'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=800&auto=format&fit=crop', data:'2025-08-05'},
-          {id:107, cat:'audio', titulo:'Caixa de Som Bluetooth Port·til', desc:'Som potente, IPX5 e viva-voz.', preco:159.9, parc:6, tag:'Port·til', img:'https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=80&w=800&auto=format&fit=crop', data:'2025-08-04'},
-          {id:108, cat:'celulares', titulo:'iPhone 13 128GB ó Seminovo', desc:'Tela 6.1î OLED, bateria 90%+, sem marcas.', preco:2699.0, parc:12, tag:'Garantia', img:'https://images.unsplash.com/photo-1603899121259-9f6c79f0011d?q=80&w=800&auto=format&fit=crop', data:'2025-08-03'},
-          {id:109, cat:'celulares', titulo:'Samsung Galaxy S21 128GB ó Seminovo', desc:'Tela 6.2î 120Hz, c‚mera tripla.', preco:1999.0, parc:12, tag:'Inspecionado', img:'https://images.unsplash.com/photo-1610945415295-5c9e2a0d0b18?q=80&w=800&auto=format&fit=crop', data:'2025-08-02'},
-          {id:110, cat:'capas', titulo:'Case MagSafe Transl˙cida (iPhone 12/13/14)', desc:'CompatÌvel com carregamento magnÈtico.', preco:99.9, parc:4, tag:'MagSafe', img:'https://images.unsplash.com/photo-1603714228681-8bc5a8c94b3f?q=80&w=800&auto=format&fit=crop', data:'2025-08-02'},
-          {id:111, cat:'cabos', titulo:'Carregador Veicular R·pido 36W', desc:'Duas portas USB + display digital.', preco:89.9, parc:3, tag:'Carro', img:'https://images.unsplash.com/photo-1541534401786-2077eed87a72?q=80&w=800&auto=format&fit=crop', data:'2025-08-01'},
-          {id:112, cat:'servicos', titulo:'Troca de Tela ó iPhone', desc:'Tela premium com garantia e teste na hora.', preco:0, parc:null, tag:'ServiÁo', img:'https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop', data:'2025-08-01'},
+          {id:101, cat:'cabos', titulo:'Carregador Turbo USB-C 25W', desc:'Compat√≠vel com Samsung, Motorola e Xiaomi. Sa√≠da PD 25W.', preco:119.9, parc:5, tag:'Original', img:'https://images.unsplash.com/photo-1586816879360-004f5b0c51e3?q=80&w=800&auto=format&fit=crop', data:'2025-08-10'},
+          {id:102, cat:'cabos', titulo:'Cabo Magn√©tico 3 em 1', desc:'Lightning, Micro-USB e USB-C com engate r√°pido.', preco:59.9, parc:3, tag:'3 em 1', img:'https://images.unsplash.com/photo-1581351123004-757df051db8d?q=80&w=800&auto=format&fit=crop', data:'2025-08-09'},
+          {id:103, cat:'audio', titulo:'Fone Bluetooth TWS Pro', desc:'Cancelamento de ru√≠do, IPX4, 24h de bateria.', preco:199.9, parc:6, tag:'Top', img:'https://images.unsplash.com/photo-1518449073235-2206b9b9c2c5?q=80&w=800&auto=format&fit=crop', data:'2025-08-08'},
+          {id:104, cat:'peliculas', titulo:'Pel√≠cula de Vidro 9H', desc:'Anti-risco e anti-impacto para iPhone/Samsung/Motorola.', preco:39.9, parc:2, tag:'Prote√ß√£o', img:'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800&auto=format&fit=crop', data:'2025-08-07'},
+          {id:105, cat:'capas', titulo:'Capinha Anti-Impacto Transparente', desc:'Prote√ß√£o refor√ßada com cantos airbag.', preco:69.9, parc:3, tag:'Mais vendido', img:'https://images.unsplash.com/photo-1600166898404-c6d015f5aa98?q=80&w=800&auto=format&fit=crop', data:'2025-08-06'},
+          {id:106, cat:'cabos', titulo:'Power Bank 20.000mAh', desc:'Duas sa√≠das USB, carregamento r√°pido.', preco:179.9, parc:6, tag:'Alta capacidade', img:'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=800&auto=format&fit=crop', data:'2025-08-05'},
+          {id:107, cat:'audio', titulo:'Caixa de Som Bluetooth Port√°til', desc:'Som potente, IPX5 e viva-voz.', preco:159.9, parc:6, tag:'Port√°til', img:'https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=80&w=800&auto=format&fit=crop', data:'2025-08-04'},
+          {id:108, cat:'celulares', titulo:'iPhone 13 128GB ‚Äî Seminovo', desc:'Tela 6.1‚Äù OLED, bateria 90%+, sem marcas.', preco:2699.0, parc:12, tag:'Garantia', img:'https://images.unsplash.com/photo-1603899121259-9f6c79f0011d?q=80&w=800&auto=format&fit=crop', data:'2025-08-03'},
+          {id:109, cat:'celulares', titulo:'Samsung Galaxy S21 128GB ‚Äî Seminovo', desc:'Tela 6.2‚Äù 120Hz, c√¢mera tripla.', preco:1999.0, parc:12, tag:'Inspecionado', img:'https://images.unsplash.com/photo-1610945415295-5c9e2a0d0b18?q=80&w=800&auto=format&fit=crop', data:'2025-08-02'},
+          {id:110, cat:'capas', titulo:'Case MagSafe Transl√∫cida (iPhone 12/13/14)', desc:'Compat√≠vel com carregamento magn√©tico.', preco:99.9, parc:4, tag:'MagSafe', img:'https://images.unsplash.com/photo-1603714228681-8bc5a8c94b3f?q=80&w=800&auto=format&fit=crop', data:'2025-08-02'},
+          {id:111, cat:'cabos', titulo:'Carregador Veicular R√°pido 36W', desc:'Duas portas USB + display digital.', preco:89.9, parc:3, tag:'Carro', img:'https://images.unsplash.com/photo-1541534401786-2077eed87a72?q=80&w=800&auto=format&fit=crop', data:'2025-08-01'},
+          {id:112, cat:'servicos', titulo:'Troca de Tela ‚Äî iPhone', desc:'Tela premium com garantia e teste na hora.', preco:0, parc:null, tag:'Servi√ßo', img:'https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop', data:'2025-08-01'},
           {id:113, cat:'capas', titulo:'Capinha Silicone Fosca (Samsung A14/A34/A54)', desc:'Toque aveludado, antirrisco.', preco:54.9, parc:2, tag:'Nova', img:'https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?q=80&w=800&auto=format&fit=crop', data:'2025-07-31'},
-          {id:114, cat:'peliculas', titulo:'PelÌcula Privacidade', desc:'Protege a tela e seus dados em p˙blico.', preco:59.9, parc:3, tag:'Privacidade', img:'https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=800&auto=format&fit=crop', data:'2025-07-31'},
-          {id:115, cat:'cabos', titulo:'Cabo USB-C 60W ReforÁado 1m', desc:'Power Delivery 60W, malha tranÁada.', preco:49.9, parc:3, tag:'ReforÁado', img:'https://images.unsplash.com/photo-1603565816270-104a56d2ad5c?q=80&w=800&auto=format&fit=crop', data:'2025-07-30'},
+          {id:114, cat:'peliculas', titulo:'Pel√≠cula Privacidade', desc:'Protege a tela e seus dados em p√∫blico.', preco:59.9, parc:3, tag:'Privacidade', img:'https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=800&auto=format&fit=crop', data:'2025-07-31'},
+          {id:115, cat:'cabos', titulo:'Cabo USB-C 60W Refor√ßado 1m', desc:'Power Delivery 60W, malha tran√ßada.', preco:49.9, parc:3, tag:'Refor√ßado', img:'https://images.unsplash.com/photo-1603565816270-104a56d2ad5c?q=80&w=800&auto=format&fit=crop', data:'2025-07-30'},
           {id:116, cat:'audio', titulo:'Headset Over-Ear com Microfone', desc:'Conforto para games e chamadas.', preco:219.9, parc:8, tag:'Conforto', img:'https://images.unsplash.com/photo-1517673132405-a56a62b18caf?q=80&w=800&auto=format&fit=crop', data:'2025-07-29'},
-          {id:117, cat:'celulares', titulo:'Motorola Moto G54 ó 128GB', desc:'C‚mera de 50MP, bateria 5000mAh.', preco:1199.0, parc:10, tag:'Novo', img:'https://images.unsplash.com/photo-1598327105666-5b89351aff97?q=80&w=800&auto=format&fit=crop', data:'2025-07-28'},
-          {id:118, cat:'cabos', titulo:'Adaptador OTG USB-C', desc:'Conecte pendrives e perifÈricos.', preco:39.9, parc:2, tag:'OTG', img:'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800&auto=format&fit=crop', data:'2025-07-27'},
-          {id:119, cat:'capas', titulo:'Capinha Anti-Impacto Militar (Moto G)', desc:'Cantos reforÁados, suporte traseiro.', preco:64.9, parc:3, tag:'ProteÁ„o', img:'https://images.unsplash.com/photo-1600166898404-c6d015f5aa98?q=80&w=800&auto=format&fit=crop', data:'2025-07-27'},
-          {id:120, cat:'servicos', titulo:'AplicaÁ„o de PelÌcula Profissional', desc:'AplicaÁ„o sem bolhas e com alinhamento.', preco:0, parc:null, tag:'ServiÁo', img:'https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=800&auto=format&fit=crop', data:'2025-07-26'}
+          {id:117, cat:'celulares', titulo:'Motorola Moto G54 ‚Äî 128GB', desc:'C√¢mera de 50MP, bateria 5000mAh.', preco:1199.0, parc:10, tag:'Novo', img:'https://images.unsplash.com/photo-1598327105666-5b89351aff97?q=80&w=800&auto=format&fit=crop', data:'2025-07-28'},
+          {id:118, cat:'cabos', titulo:'Adaptador OTG USB-C', desc:'Conecte pendrives e perif√©ricos.', preco:39.9, parc:2, tag:'OTG', img:'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800&auto=format&fit=crop', data:'2025-07-27'},
+          {id:119, cat:'capas', titulo:'Capinha Anti-Impacto Militar (Moto G)', desc:'Cantos refor√ßados, suporte traseiro.', preco:64.9, parc:3, tag:'Prote√ß√£o', img:'https://images.unsplash.com/photo-1600166898404-c6d015f5aa98?q=80&w=800&auto=format&fit=crop', data:'2025-07-27'},
+          {id:120, cat:'servicos', titulo:'Aplica√ß√£o de Pel√≠cula Profissional', desc:'Aplica√ß√£o sem bolhas e com alinhamento.', preco:0, parc:null, tag:'Servi√ßo', img:'https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=800&auto=format&fit=crop', data:'2025-07-26'}
         ],
 
         filtrados:[], paginados:[],
@@ -332,10 +332,10 @@
 
         comprarWhatsApp(p, variante){
           const cod = document.getElementById('qCod');
-          const codTxt = cod && cod.checked ? ' (Pagamento na entrega ??)' : '';
-          const titulo = p.titulo + (variante?` ó ${variante}`:'');
+          const codTxt = cod && cod.checked ? ' (Pagamento na entrega ‚úîÔ∏è)' : '';
+          const titulo = p.titulo + (variante?` ‚Äî ${variante}`:'');
           const preco  = p.preco ? this.formatBRL(p.preco) : 'A combinar';
-          const texto = `Ol·! Tenho interesse em *${titulo}* (Categoria: ${p.cat}). PreÁo: ${preco}.${codTxt} Pode me ajudar?`;
+          const texto = `Ol√°! Tenho interesse em *${titulo}* (Categoria: ${p.cat}). Pre√ßo: ${preco}.${codTxt} Pode me ajudar?`;
           const url = `https://wa.me/${this.waNumero}?text=${encodeURIComponent(texto)}`;
           window.open(url,'_blank','noopener');
         },
@@ -343,9 +343,9 @@
         abrirQuick(p){
           const d = document;
           d.getElementById('qImg').src = p.img; d.getElementById('qTitulo').textContent=p.titulo; d.getElementById('qDesc').textContent=p.desc;
-          d.getElementById('qPreco').textContent=this.formatBRL(p.preco); d.getElementById('qParc').textContent = p.parc?`atÈ ${p.parc}x`:'';
+          d.getElementById('qPreco').textContent=this.formatBRL(p.preco); d.getElementById('qParc').textContent = p.parc?`at√© ${p.parc}x`:'';
           const box = d.getElementById('qVariantes'); box.innerHTML='';
-          const variantes = p.cat==='capas' ? ['Preta','Transparente','FumÍ'] : p.cat==='peliculas' ? ['Padr„o','Privacidade','Cer‚mica'] : p.cat==='audio'? ['Preto','Branco'] : [];
+          const variantes = p.cat==='capas' ? ['Preta','Transparente','Fum√™'] : p.cat==='peliculas' ? ['Padr√£o','Privacidade','Cer√¢mica'] : p.cat==='audio'? ['Preto','Branco'] : [];
           variantes.forEach(v=>{ const b = d.createElement('button'); b.className='chip'; b.textContent=v; b.onclick=()=>this.comprarWhatsApp(p, v); box.appendChild(b); });
           const btn = d.getElementById('qComprar'); btn.onclick=()=>this.comprarWhatsApp(p);
           d.getElementById('qCod').checked=false;
@@ -364,8 +364,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TecHouse ó AssistÍncia e AcessÛrios</title>
-  <meta name="description" content="Cat·logo TecHouse: assistÍncia tÈcnica, capas, pelÌculas, cabos e ·udio. Compre pelo WhatsApp em 1 clique." />
+  <title>TecHouse ‚Äî Assist√™ncia e Acess√≥rios</title>
+  <meta name="description" content="Cat√°logo TecHouse: assist√™ncia t√©cnica, capas, pel√≠culas, cabos e √°udio. Compre pelo WhatsApp em 1 clique." />
   <meta name="theme-color" content="#0F1115"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -375,7 +375,7 @@
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script src="https://kit.fontawesome.com/a2d9d5f2c8.js" crossorigin="anonymous"></script>
   <link rel="manifest" href="data:application/manifest+json,{
-  \"name\":\"TecHouse ó AssistÍncia e AcessÛrios\",
+  \"name\":\"TecHouse ‚Äî Assist√™ncia e Acess√≥rios\",
   \"short_name\":\"TecHouse\",
   \"start_url\":\"./index.html\",
   \"display\":\"standalone\",
@@ -445,7 +445,7 @@
     .pill{display:inline-flex; align-items:center; gap:6px; padding:6px 10px; border-radius:999px; border:1px solid rgba(255,255,255,.12); background:#1b1f27; font-size:.8rem}
   </style>
   <script>
-    // service worker mÌnimo embutido (inline) para PWA cache-first
+    // service worker m√≠nimo embutido (inline) para PWA cache-first
     if('serviceWorker' in navigator){
       const sw = `self.addEventListener('install',e=>{e.waitUntil(caches.open('techouse-v1').then(c=>c.addAll(['./','./index.html','MOCKUP 3.png'])))});self.addEventListener('fetch',e=>{e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request)))})`;
       const blob = new Blob([sw],{type:'text/javascript'});
@@ -464,20 +464,20 @@
         <img src="MOCKUP 3.png" alt="Logo TecHouse" />
         <div>
           <h1>TecHouse</h1>
-          <small>AssistÍncia e AcessÛrios</small>
+          <small>Assist√™ncia e Acess√≥rios</small>
         </div>
       </a>
 
       <label class="search" aria-label="Buscar produtos">
         <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="search" placeholder="Buscar por nome, modelo ou categoriaÖ" x-model="q" @input="applyFilters" />
+        <input type="search" placeholder="Buscar por nome, modelo ou categoria‚Ä¶" x-model="q" @input="applyFilters" />
       </label>
 
       <div class="controls">
         <select class="chip" x-model="ordem" @change="applyFilters">
-          <option value="relevancia">Ordenar: Relev‚ncia</option>
-          <option value="menor">Menor preÁo</option>
-          <option value="maior">Maior preÁo</option>
+          <option value="relevancia">Ordenar: Relev√¢ncia</option>
+          <option value="menor">Menor pre√ßo</option>
+          <option value="maior">Maior pre√ßo</option>
           <option value="novos">Mais novos</option>
         </select>
         <a class="cta-wa" :href="waLoja" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
@@ -490,15 +490,15 @@
   <section class="container hero">
     <div class="hero-card" data-aos="fade-up">
       <div>
-        <h2>AssistÍncia tÈcnica e acessÛrios premium, com <span style="color:var(--gold)">compra pelo WhatsApp</span> em 1 clique.</h2>
-        <p>Cat·logo atualizado, garantia, retirada r·pida e opÁ„o de <strong>pagamento na entrega</strong> em Lorena/SP.</p>
+        <h2>Assist√™ncia t√©cnica e acess√≥rios premium, com <span style="color:var(--gold)">compra pelo WhatsApp</span> em 1 clique.</h2>
+        <p>Cat√°logo atualizado, garantia, retirada r√°pida e op√ß√£o de <strong>pagamento na entrega</strong> em Lorena/SP.</p>
         <div class="badges">
           <span class="badge"><i class="fa-solid fa-shield-halved"></i> Garantia</span>
-          <span class="badge"><i class="fa-solid fa-bolt"></i> Retirada R·pida</span>
+          <span class="badge"><i class="fa-solid fa-bolt"></i> Retirada R√°pida</span>
           <span class="badge"><i class="fa-solid fa-hand-holding-dollar"></i> Pague na entrega</span>
         </div>
         <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px">
-          <span class="pill"><i class="fa-solid fa-location-dot"></i> Lorena e regi„o</span>
+          <span class="pill"><i class="fa-solid fa-location-dot"></i> Lorena e regi√£o</span>
           <span class="pill"><i class="fa-solid fa-certificate" style="color:var(--gold)"></i> Qualidade TecHouse</span>
         </div>
         <div style="display:flex; gap:12px; margin-top:14px">
@@ -514,10 +514,10 @@
     <div class="filters" data-aos="fade-up" data-aos-delay="100">
       <button class="chip" :data-active="cat==='all'" @click="setCat('all')">Tudo</button>
       <button class="chip" :data-active="cat==='capas'" @click="setCat('capas')">Capas</button>
-      <button class="chip" :data-active="cat==='peliculas'" @click="setCat('peliculas')">PelÌculas</button>
+      <button class="chip" :data-active="cat==='peliculas'" @click="setCat('peliculas')">Pel√≠culas</button>
       <button class="chip" :data-active="cat==='cabos'" @click="setCat('cabos')">Cabos & Carregadores</button>
-      <button class="chip" :data-active="cat==='audio'" @click="setCat('audio')">¡udio</button>
-      <button class="chip" :data-active="cat==='servicos'" @click="setCat('servicos')">ServiÁos</button>
+      <button class="chip" :data-active="cat==='audio'" @click="setCat('audio')">√Åudio</button>
+      <button class="chip" :data-active="cat==='servicos'" @click="setCat('servicos')">Servi√ßos</button>
       <span class="chip" style="cursor:default">Resultados: <b x-text="filtrados.length"></b></span>
     </div>
 
@@ -533,7 +533,7 @@
             <p class="desc" x-text="p.desc" itemprop="description"></p>
             <div class="price">
               <strong x-text="formatBRL(p.preco)" itemprop="price"></strong>
-              <span class="muted" x-show="p.parc">em atÈ {{p.parc}}x</span>
+              <span class="muted" x-show="p.parc">em at√© {{p.parc}}x</span>
             </div>
             <div class="actions">
               <button class="btn-wa" @click="comprarWhatsApp(p)"><i class="fa-brands fa-whatsapp"></i> Comprar</button>
@@ -544,11 +544,11 @@
       </template>
     </div>
 
-    <!-- PaginaÁ„o -->
+    <!-- Pagina√ß√£o -->
     <div class="container" style="display:flex; gap:10px; justify-content:center; margin-top:18px">
-      <button class="chip" :disabled="pagina===1" @click="pagina--; paginar()">? Anterior</button>
-      <span class="chip" style="cursor:default">P·gina <b x-text="pagina"></b> de <b x-text="totalPaginas"></b></span>
-      <button class="chip" :disabled="pagina===totalPaginas" @click="pagina++; paginar()">PrÛxima ?</button>
+      <button class="chip" :disabled="pagina===1" @click="pagina--; paginar()">‚Üê Anterior</button>
+      <span class="chip" style="cursor:default">P√°gina <b x-text="pagina"></b> de <b x-text="totalPaginas"></b></span>
+      <button class="chip" :disabled="pagina===totalPaginas" @click="pagina++; paginar()">Pr√≥xima ‚Üí</button>
     </div>
   </section>
 
@@ -579,7 +579,7 @@
     <div class="container footer-grid">
       <div>
         <h4 style="margin:0 0 6px 0">TecHouse</h4>
-        <p class="muted">AssistÍncia tÈcnica, acessÛrios e soluÁıes para seu smartphone. Atendimento r·pido via WhatsApp.</p>
+        <p class="muted">Assist√™ncia t√©cnica, acess√≥rios e solu√ß√µes para seu smartphone. Atendimento r√°pido via WhatsApp.</p>
         <div class="social">
           <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
           <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
@@ -589,23 +589,23 @@
       <div>
         <h4 style="margin:0 0 6px 0">Atendimento</h4>
         <ul style="list-style:none; padding:0; margin:0; color:var(--silver)">
-          <li>SegñS·b: 9h ‡s 19h</li>
+          <li>Seg‚ÄìS√°b: 9h √†s 19h</li>
           <li>WhatsApp: <a :href="waLoja" target="_blank" rel="noopener" style="color:#9FE7BF">(12) 99201-8898</a></li>
           <li>Retirada na loja</li>
         </ul>
       </div>
       <div>
-        <h4 style="margin:0 0 6px 0">Links r·pidos</h4>
+        <h4 style="margin:0 0 6px 0">Links r√°pidos</h4>
         <ul style="list-style:none; padding:0; margin:0; color:var(--silver)">
           <li><a href="#grid" style="color:var(--silver)">Produtos</a></li>
           <li><a :href="waLoja" target="_blank" rel="noopener" style="color:var(--silver)">Falar no Whats</a></li>
-          <li><a href="#" style="color:var(--silver)">PolÌtica de Troca</a></li>
+          <li><a href="#" style="color:var(--silver)">Pol√≠tica de Troca</a></li>
         </ul>
       </div>
     </div>
     <div class="container" style="border-top:1px solid rgba(255,255,255,.08); margin-top:18px; padding-top:12px; color:var(--silver); display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap">
-      <small>© <span x-text="new Date().getFullYear()"></span> TecHouse. Todos os direitos reservados.</small>
-      <small>Feito com ? no Brasil.</small>
+      <small>¬© <span x-text="new Date().getFullYear()"></span> TecHouse. Todos os direitos reservados.</small>
+      <small>Feito com ‚ù§ no Brasil.</small>
     </div>
   </footer>
 
@@ -613,11 +613,11 @@
     <div style="display:flex; gap:10px; align-items:flex-start">
       <div style="background:rgba(207,162,74,.18); border:1px solid rgba(207,162,74,.35); width:48px; height:48px; border-radius:12px; display:grid; place-items:center"><i class="fa-solid fa-bolt" style="color:var(--gold)"></i></div>
       <div style="flex:1">
-        <strong>Oferta rel‚mpago</strong>
-        <p class="muted" style="margin:4px 0 8px 0">Leve 2 pelÌculas e ganhe <strong>10% OFF</strong> em capinhas. V·lido hoje!</p>
+        <strong>Oferta rel√¢mpago</strong>
+        <p class="muted" style="margin:4px 0 8px 0">Leve 2 pel√≠culas e ganhe <strong>10% OFF</strong> em capinhas. V√°lido hoje!</p>
         <div style="display:flex; gap:8px">
           <button class="btn btn-primary" @click="abrirOferta()">Ver itens</button>
-          <button class="btn btn-outline" @click="mostrarPromo=false">Agora n„o</button>
+          <button class="btn btn-outline" @click="mostrarPromo=false">Agora n√£o</button>
         </div>
       </div>
       <button class="close-x" style="position:static" @click="mostrarPromo=false"><i class="fa-solid fa-xmark"></i></button>
@@ -637,18 +637,18 @@
         q:'', cat:'all', mostrarPromo:true, ordem:'relevancia',
         pagina:1, porPagina:8, totalPaginas:1,
         waNumero: '5512992018898',
-        get waLoja(){ return `https://wa.me/${this.waNumero}?text=${encodeURIComponent('Ol·! Vim pelo site da TecHouse e gostaria de atendimento.')}'; },
+        get waLoja(){ return `https://wa.me/${this.waNumero}?text=${encodeURIComponent('Ol√°! Vim pelo site da TecHouse e gostaria de atendimento.')}'; },
 
         produtos:[
-          {id:1, cat:'capas', titulo:'Capa Anti-Impacto iPhone 11/12', desc:'ProteÁ„o militar com bordas reforÁadas e traseira transl˙cida.', preco:69.9, parc:3, tag:'Mais vendido', img:'https://images.unsplash.com/photo-1600166898404-c6d015f5aa98?q=80&w=800&auto=format&fit=crop', data: '2025-08-01'},
-          {id:2, cat:'peliculas', titulo:'PelÌcula de Vidro 9H (iPhone/Samsung)', desc:'Alta resistÍncia com cobertura total.', preco:39.9, parc:2, tag:'Oferta', img:'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800&auto=format&fit=crop', data: '2025-08-02'},
-          {id:3, cat:'cabos', titulo:'Cabo USB-C 60W ReforÁado 1m', desc:'Carregamento r·pido PD, malha tranÁada.', preco:49.9, parc:3, tag:'Novo', img:'https://images.unsplash.com/photo-1586816879360-004f5b0c51e3?q=80&w=800&auto=format&fit=crop', data: '2025-08-03'},
-          {id:4, cat:'audio', titulo:'Fone Bluetooth TWS Pro', desc:'Cancelamento de ruÌdo, 24h de bateria.', preco:189.9, parc:6, tag:'Top', img:'https://images.unsplash.com/photo-1518449073235-2206b9b9c2c5?q=80&w=800&auto=format&fit=crop', data: '2025-08-04'},
-          {id:5, cat:'servicos', titulo:'Troca de Tela ó Linha iPhone', desc:'Tela premium com garantia e teste na hora.', preco:0, parc:null, tag:'ServiÁo', img:'https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop', data: '2025-08-05'},
-          {id:6, cat:'capas', titulo:'Case MagSafe Transl˙cida', desc:'CompatÌvel com carregamento magnÈtico.', preco:99.9, parc:4, tag:'Novidade', img:'https://images.unsplash.com/photo-1603714228681-8bc5a8c94b3f?q=80&w=800&auto=format&fit=crop', data: '2025-08-06'},
-          {id:7, cat:'cabos', titulo:'Carregador Turbo 20W + Cabo', desc:'Kit homologado com proteÁ„o contra sobrecarga.', preco:129.9, parc:5, tag:'Combo', img:'https://images.unsplash.com/photo-1585386959984-a41552231658?q=80&w=800&auto=format&fit=crop', data: '2025-08-07'},
-          {id:8, cat:'audio', titulo:'Caixa de Som Bluetooth Compact', desc:'Som potente e port·til, IPX5.', preco:159.9, parc:6, tag:'Port·til', img:'https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=80&w=800&auto=format&fit=crop', data: '2025-08-08'},
-          {id:9, cat:'peliculas', titulo:'PelÌcula Anti-Blue Light', desc:'ProteÁ„o para vista com filtro azul.', preco:49.9, parc:3, tag:'Sa˙de', img:'https://images.unsplash.com/photo-1565538420870-59aa6fe59b8b?q=80&w=800&auto=format&fit=crop', data: '2025-08-09'}
+          {id:1, cat:'capas', titulo:'Capa Anti-Impacto iPhone 11/12', desc:'Prote√ß√£o militar com bordas refor√ßadas e traseira transl√∫cida.', preco:69.9, parc:3, tag:'Mais vendido', img:'https://images.unsplash.com/photo-1600166898404-c6d015f5aa98?q=80&w=800&auto=format&fit=crop', data: '2025-08-01'},
+          {id:2, cat:'peliculas', titulo:'Pel√≠cula de Vidro 9H (iPhone/Samsung)', desc:'Alta resist√™ncia com cobertura total.', preco:39.9, parc:2, tag:'Oferta', img:'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800&auto=format&fit=crop', data: '2025-08-02'},
+          {id:3, cat:'cabos', titulo:'Cabo USB-C 60W Refor√ßado 1m', desc:'Carregamento r√°pido PD, malha tran√ßada.', preco:49.9, parc:3, tag:'Novo', img:'https://images.unsplash.com/photo-1586816879360-004f5b0c51e3?q=80&w=800&auto=format&fit=crop', data: '2025-08-03'},
+          {id:4, cat:'audio', titulo:'Fone Bluetooth TWS Pro', desc:'Cancelamento de ru√≠do, 24h de bateria.', preco:189.9, parc:6, tag:'Top', img:'https://images.unsplash.com/photo-1518449073235-2206b9b9c2c5?q=80&w=800&auto=format&fit=crop', data: '2025-08-04'},
+          {id:5, cat:'servicos', titulo:'Troca de Tela ‚Äî Linha iPhone', desc:'Tela premium com garantia e teste na hora.', preco:0, parc:null, tag:'Servi√ßo', img:'https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop', data: '2025-08-05'},
+          {id:6, cat:'capas', titulo:'Case MagSafe Transl√∫cida', desc:'Compat√≠vel com carregamento magn√©tico.', preco:99.9, parc:4, tag:'Novidade', img:'https://images.unsplash.com/photo-1603714228681-8bc5a8c94b3f?q=80&w=800&auto=format&fit=crop', data: '2025-08-06'},
+          {id:7, cat:'cabos', titulo:'Carregador Turbo 20W + Cabo', desc:'Kit homologado com prote√ß√£o contra sobrecarga.', preco:129.9, parc:5, tag:'Combo', img:'https://images.unsplash.com/photo-1585386959984-a41552231658?q=80&w=800&auto=format&fit=crop', data: '2025-08-07'},
+          {id:8, cat:'audio', titulo:'Caixa de Som Bluetooth Compact', desc:'Som potente e port√°til, IPX5.', preco:159.9, parc:6, tag:'Port√°til', img:'https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=80&w=800&auto=format&fit=crop', data: '2025-08-08'},
+          {id:9, cat:'peliculas', titulo:'Pel√≠cula Anti-Blue Light', desc:'Prote√ß√£o para vista com filtro azul.', preco:49.9, parc:3, tag:'Sa√∫de', img:'https://images.unsplash.com/photo-1565538420870-59aa6fe59b8b?q=80&w=800&auto=format&fit=crop', data: '2025-08-09'}
         ],
 
         filtrados:[], paginados:[],
@@ -681,10 +681,10 @@
 
         comprarWhatsApp(p, variante){
           const cod = document.getElementById('qCod');
-          const codTxt = cod && cod.checked ? ' (Pagamento na entrega ??)' : '';
-          const titulo = p.titulo + (variante?` ó ${variante}`:'');
+          const codTxt = cod && cod.checked ? ' (Pagamento na entrega ‚úîÔ∏è)' : '';
+          const titulo = p.titulo + (variante?` ‚Äî ${variante}`:'');
           const preco  = p.preco ? this.formatBRL(p.preco) : 'A combinar';
-          const texto = `Ol·! Tenho interesse em *${titulo}* (Categoria: ${p.cat}). PreÁo: ${preco}.${codTxt} Pode me ajudar?`;
+          const texto = `Ol√°! Tenho interesse em *${titulo}* (Categoria: ${p.cat}). Pre√ßo: ${preco}.${codTxt} Pode me ajudar?`;
           const url = `https://wa.me/${this.waNumero}?text=${encodeURIComponent(texto)}`;
           window.open(url,'_blank','noopener');
         },
@@ -692,9 +692,9 @@
         abrirQuick(p){
           const d = document;
           d.getElementById('qImg').src = p.img; d.getElementById('qTitulo').textContent=p.titulo; d.getElementById('qDesc').textContent=p.desc;
-          d.getElementById('qPreco').textContent=this.formatBRL(p.preco); d.getElementById('qParc').textContent = p.parc?`atÈ ${p.parc}x`:'';
+          d.getElementById('qPreco').textContent=this.formatBRL(p.preco); d.getElementById('qParc').textContent = p.parc?`at√© ${p.parc}x`:'';
           const box = d.getElementById('qVariantes'); box.innerHTML='';
-          const variantes = p.cat==='capas' ? ['Preta','Transparente','FumÍ'] : p.cat==='peliculas' ? ['Padr„o','Privacidade','Cer‚mica'] : p.cat==='audio'? ['Preto','Branco'] : [];
+          const variantes = p.cat==='capas' ? ['Preta','Transparente','Fum√™'] : p.cat==='peliculas' ? ['Padr√£o','Privacidade','Cer√¢mica'] : p.cat==='audio'? ['Preto','Branco'] : [];
           variantes.forEach(v=>{ const b = d.createElement('button'); b.className='chip'; b.textContent=v; b.onclick=()=>this.comprarWhatsApp(p, v); box.appendChild(b); });
           const btn = d.getElementById('qComprar'); btn.onclick=()=>this.comprarWhatsApp(p);
           d.getElementById('qCod').checked=false;
